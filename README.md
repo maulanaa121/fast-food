@@ -1,58 +1,464 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Fast Food
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Aplikasi web **Fast Food** yang dibangun menggunakan Laravel 13, Tailwind CSS, Vite, dan Docker Laravel Sail.
 
-## About Laravel
+## 🛠️ Tech Stack
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+* **Laravel 13**
+* **PHP 8.5**
+* **Tailwind CSS 4**
+* **Vite**
+* **MySQL 8.4**
+* **Redis**
+* **Laravel Sail / Docker**
+* **Mailpit**
+* **Meilisearch**
+* **Selenium**
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 📋 Requirements
 
-## Learning Laravel
+Sebelum menjalankan project, pastikan sudah menginstall:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+* Git
+* Docker Desktop
+* WSL 2
+* Ubuntu (WSL)
+* Composer
+* Node.js & NPM
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Pastikan Docker Desktop sudah aktif dan WSL Integration untuk Ubuntu sudah diaktifkan.
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
-
-## Agentic Development
-
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+Cek Docker:
 
 ```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
+docker --version
+docker compose version
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+Cek Composer:
 
-## Contributing
+```bash
+composer --version
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+# 🚀 Installation
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 1. Clone Repository
 
-## Security Vulnerabilities
+Clone repository ke folder project:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```bash
+git clone <URL_REPOSITORY> fast-food
+```
 
-## License
+Masuk ke folder project:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```bash
+cd fast-food
+```
+
+---
+
+## 2. Install PHP Dependencies
+
+Install dependency Laravel menggunakan Composer:
+
+```bash
+composer install
+```
+
+---
+
+## 3. Buat File `.env`
+
+Salin `.env.example` menjadi `.env`:
+
+```bash
+cp .env.example .env
+```
+
+Kemudian generate application key:
+
+```bash
+php artisan key:generate
+```
+
+> Jika menggunakan Docker/Sail dan PHP/Composer tidak tersedia di host, dependency dan konfigurasi dapat dijalankan menggunakan environment Docker sesuai konfigurasi project.
+
+---
+
+## 4. Jalankan Docker Laravel Sail
+
+Pastikan Docker Desktop sedang berjalan.
+
+Jalankan:
+
+```bash
+./vendor/bin/sail up -d
+```
+
+Periksa container:
+
+```bash
+./vendor/bin/sail ps
+```
+
+Pastikan container Laravel dan MySQL dalam status `Up`.
+
+---
+
+## 5. Jalankan Database Migration
+
+Setelah container MySQL berjalan, jalankan:
+
+```bash
+./vendor/bin/sail artisan migrate
+```
+
+Jika project memiliki database seeder, jalankan:
+
+```bash
+./vendor/bin/sail artisan db:seed
+```
+
+Atau jika ingin menjalankan migration sekaligus seeder:
+
+```bash
+./vendor/bin/sail artisan migrate --seed
+```
+
+---
+
+## 6. Install Node Dependencies
+
+Install dependency frontend:
+
+```bash
+./vendor/bin/sail npm install
+```
+
+---
+
+## 7. Jalankan Vite dan Tailwind CSS
+
+Jalankan:
+
+```bash
+./vendor/bin/sail npm run dev
+```
+
+Vite akan berjalan dan memproses Tailwind CSS.
+
+Biarkan terminal tetap terbuka selama development.
+
+---
+
+# ⚡ Menjalankan Project dengan Satu Terminal
+
+Untuk menjalankan Docker Laravel sekaligus Vite/Tailwind dalam satu terminal, gunakan:
+
+```bash
+./vendor/bin/sail up -d && ./vendor/bin/sail npm run dev
+```
+
+Perintah tersebut akan:
+
+1. Menyalakan seluruh container Docker.
+2. Menjalankan Laravel melalui Laravel Sail.
+3. Menjalankan Vite.
+4. Memproses Tailwind CSS.
+
+Setelah Vite berjalan, buka browser:
+
+```text
+http://localhost
+```
+
+---
+
+# 🌐 Menjalankan Project
+
+Setelah Docker dan Vite berjalan, akses aplikasi melalui:
+
+```text
+http://localhost
+```
+
+Laravel berjalan melalui Docker pada port `80`.
+
+Vite menggunakan port:
+
+```text
+5173
+```
+
+---
+
+# 🗄️ Database
+
+Project menggunakan MySQL yang dijalankan melalui Docker.
+
+Konfigurasi database di `.env` menggunakan hostname Docker:
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=mysql
+DB_PORT=3306
+DB_DATABASE=laravel
+DB_USERNAME=sail
+DB_PASSWORD=password
+```
+
+> Jangan mengubah `DB_HOST=mysql` menjadi `localhost` ketika Laravel berjalan di dalam Docker.
+
+---
+
+# 🧰 Perintah Laravel yang Sering Digunakan
+
+Menjalankan Artisan:
+
+```bash
+./vendor/bin/sail artisan
+```
+
+Membuat controller:
+
+```bash
+./vendor/bin/sail artisan make:controller ProductController
+```
+
+Membuat model dan migration:
+
+```bash
+./vendor/bin/sail artisan make:model Product -m
+```
+
+Menjalankan migration:
+
+```bash
+./vendor/bin/sail artisan migrate
+```
+
+Melihat status migration:
+
+```bash
+./vendor/bin/sail artisan migrate:status
+```
+
+Membuat seeder:
+
+```bash
+./vendor/bin/sail artisan make:seeder ProductSeeder
+```
+
+Membersihkan cache:
+
+```bash
+./vendor/bin/sail artisan optimize:clear
+```
+
+---
+
+# 🎨 Tailwind CSS
+
+Project menggunakan **Tailwind CSS v4** dengan Vite.
+
+File CSS utama:
+
+```text
+resources/css/app.css
+```
+
+Konfigurasi Vite:
+
+```text
+vite.config.js
+```
+
+Untuk menjalankan Vite:
+
+```bash
+./vendor/bin/sail npm run dev
+```
+
+Untuk membuat build production:
+
+```bash
+./vendor/bin/sail npm run build
+```
+
+---
+
+# 🐳 Docker / Laravel Sail
+
+Melihat container yang sedang berjalan:
+
+```bash
+./vendor/bin/sail ps
+```
+
+Menyalakan container:
+
+```bash
+./vendor/bin/sail up -d
+```
+
+Menjalankan container sekaligus melihat log:
+
+```bash
+./vendor/bin/sail up
+```
+
+Menghentikan container:
+
+```bash
+./vendor/bin/sail down
+```
+
+Melihat log:
+
+```bash
+./vendor/bin/sail logs
+```
+
+Melihat log Laravel:
+
+```bash
+./vendor/bin/sail logs laravel.test
+```
+
+---
+
+# 📦 NPM Commands
+
+Install dependency:
+
+```bash
+./vendor/bin/sail npm install
+```
+
+Menjalankan development server:
+
+```bash
+./vendor/bin/sail npm run dev
+```
+
+Build production:
+
+```bash
+./vendor/bin/sail npm run build
+```
+
+---
+
+# 🧹 Menghentikan Project
+
+Jika selesai bekerja, hentikan Vite dengan:
+
+```text
+Ctrl + C
+```
+
+Kemudian hentikan container Docker:
+
+```bash
+./vendor/bin/sail down
+```
+
+Saat ingin bekerja kembali:
+
+```bash
+./vendor/bin/sail up -d && ./vendor/bin/sail npm run dev
+```
+
+---
+
+# ⚠️ Important
+
+Jangan upload file berikut ke repository:
+
+```text
+.env
+/vendor
+/node_modules
+/public/build
+/public/hot
+```
+
+File `.env` berisi konfigurasi lokal dan informasi sensitif.
+
+Gunakan:
+
+```text
+.env.example
+```
+
+sebagai template konfigurasi.
+
+---
+
+# 📁 Project Structure
+
+```text
+fast-food/
+├── app/
+├── bootstrap/
+├── config/
+├── database/
+├── public/
+├── resources/
+│   ├── css/
+│   │   └── app.css
+│   ├── js/
+│   └── views/
+├── routes/
+├── storage/
+├── tests/
+├── .env.example
+├── artisan
+├── compose.yaml
+├── composer.json
+├── package.json
+├── package-lock.json
+├── vite.config.js
+└── README.md
+```
+
+---
+
+# 👨‍💻 Development Workflow
+
+Setelah repository berhasil di-clone dan konfigurasi awal selesai, workflow development cukup menggunakan satu terminal:
+
+```bash
+cd fast-food
+./vendor/bin/sail up -d && ./vendor/bin/sail npm run dev
+```
+
+Kemudian buka:
+
+```text
+http://localhost
+```
+
+Saat selesai:
+
+```text
+Ctrl + C
+```
+
+Kemudian:
+
+```bash
+./vendor/bin/sail down
+```
+
+---
+
+## 📄 License
+
+This project is developed for learning and development purposes.
