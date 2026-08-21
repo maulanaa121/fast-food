@@ -150,10 +150,7 @@
             <p
                 class="mx-auto mt-6 max-w-[600px] text-[17px] leading-[1.8] text-white/90 opacity-0 animate-[fadeInRight_0.8s_ease-out_0.4s_forwards] sm:text-[18px] lg:mx-0"
             >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Aut qui eos nostrum sunt vero recusandae quia sit
-                perspiciatis deleniti, debitis repellendus eaque placeat
-                repudiandae minus necessitatibus dolorem reiciendis.
+                Nikmati berbagai pilihan makanan lezat yang dibuat dengan bahan berkualitas dan cita rasa terbaik untuk menemani setiap momen.
             </p>
 
 
