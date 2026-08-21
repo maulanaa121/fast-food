@@ -1,4 +1,4 @@
-<nav class="bg-[#1B1D29] font-poppins">
+<nav class="fixed top-0 left-0 z-50 w-full bg-[#1B1D29] font-poppins">
     <div class="mx-auto flex h-[106px] max-w-[1920px] items-center justify-between px-6 sm:px-10 lg:px-12">
 
         {{-- Logo --}}
