@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
@@ -11,7 +14,7 @@
 
 <body class="bg-gray-100">
 
-    <h1 class="text-red-600 text-4xl font-medium text-center">tes connection tailwind and mysql</h1>
+    @include('layouts.navbar')
 
 </body>
 </html>
