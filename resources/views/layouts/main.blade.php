@@ -108,12 +108,12 @@
     class="bg-[#1B1D29] py-20 font-poppins sm:py-24 lg:py-28"
 >
     <div
-        class="mx-auto grid max-w-[1440px] grid-cols-1 items-center gap-12 px-6 sm:px-10 lg:grid-cols-2 lg:gap-16 lg:px-12"
+        class="mx-auto grid max-w-[1440px] grid-cols-1 items-center gap-12 px-6 sm:px-10 md:grid-cols-2 md:gap-16 md:px-12"
     >
 
         {{-- Image --}}
         <div
-            class="flex justify-center lg:justify-start"
+            class="flex justify-center md:justify-start"
         >
             <img
                 src="{{ asset('images/about.png') }}"
@@ -125,7 +125,7 @@
 
         {{-- Content --}}
         <div
-            class="text-center lg:text-left"
+            class="text-center md:text-left"
         >
 
             {{-- Label --}}
