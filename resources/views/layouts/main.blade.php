@@ -170,6 +170,190 @@
     </div>
 </section>
 
+<section
+    id="menu"
+    class="bg-[#1B1D29] py-20 font-poppins sm:py-24 lg:py-28"
+>
+    <div class="mx-auto max-w-[1280px] px-6 sm:px-10 lg:px-12">
+
+        {{-- Section Heading --}}
+        <div class="text-center">
+
+            <span class="text-[20px] font-semibold text-[#FF6527] sm:text-[22px]">
+                Food menu
+            </span>
+
+            <h2
+                class="mt-2 text-[32px] font-bold leading-tight text-white sm:text-[40px] lg:text-[44px]"
+            >
+                Fresh taste and great price
+            </h2>
+
+        </div>
+
+
+        {{-- Food Cards --}}
+        <div
+            class="mt-14 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
+        >
+
+            {{-- Card 1 --}}
+            <div
+                class="group relative overflow-hidden rounded-xl bg-[#FFF0E8] p-6 text-center transition duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/20"
+            >
+
+                {{-- Cart Button --}}
+                <button
+                    type="button"
+                    aria-label="Add Chicken Burger to cart"
+                    class="absolute right-0 top-0 flex h-11 w-11 items-center justify-center rounded-bl-xl bg-[#FF6527] text-white transition duration-300 group-hover:bg-[#e9521c]"
+                >
+                    <i class="fa-solid fa-cart-shopping text-[17px]"></i>
+                </button>
+
+
+                {{-- Food Image --}}
+                <div class="flex h-[250px] items-center justify-center">
+                    <img
+                        src="{{ asset('images/menu/food1.png') }}"
+                        alt="Chicken Burger"
+                        class="h-full w-full object-contain transition duration-500 group-hover:scale-105"
+                    >
+                </div>
+
+
+                {{-- Food Name --}}
+                <h3
+                    class="mt-5 text-[25px] font-bold text-[#1B1D29]"
+                >
+                    Chicken Burger
+                </h3>
+
+
+                {{-- Description --}}
+                <p
+                    class="mt-2 text-[18px] text-[#1B1D29]"
+                >
+                    Tasty food
+                </p>
+
+
+                {{-- Price --}}
+                <p
+                    class="mt-4 text-[18px] font-semibold text-[#FF6527]"
+                >
+                    $11.00
+                </p>
+
+            </div>
+
+
+            {{-- Card 2 --}}
+            <div
+                class="group relative overflow-hidden rounded-xl bg-[#FFF0E8] p-6 text-center transition duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/20"
+            >
+
+                {{-- Cart Button --}}
+                <button
+                    type="button"
+                    aria-label="Add Special Beef Burger to cart"
+                    class="absolute right-0 top-0 flex h-11 w-11 items-center justify-center rounded-bl-xl bg-[#FF6527] text-white transition duration-300 group-hover:bg-[#e9521c]"
+                >
+                    <i class="fa-solid fa-cart-shopping text-[17px]"></i>
+                </button>
+
+
+                {{-- Food Image --}}
+                <div class="flex h-[250px] items-center justify-center">
+                    <img
+                        src="{{ asset('images/menu/food2.png') }}"
+                        alt="Special Beef Burger"
+                        class="h-full w-full object-contain transition duration-500 group-hover:scale-105"
+                    >
+                </div>
+
+
+                {{-- Food Name --}}
+                <h3
+                    class="mt-5 text-[25px] font-bold text-[#1B1D29]"
+                >
+                    Special beef burger
+                </h3>
+
+
+                {{-- Description --}}
+                <p
+                    class="mt-2 text-[18px] text-[#1B1D29]"
+                >
+                    Tasty food
+                </p>
+
+
+                {{-- Price --}}
+                <p
+                    class="mt-4 text-[18px] font-semibold text-[#FF6527]"
+                >
+                    $11.00
+                </p>
+
+            </div>
+
+
+            {{-- Card 3 --}}
+            <div
+                class="group relative overflow-hidden rounded-xl bg-[#FFF0E8] p-6 text-center transition duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/20"
+            >
+
+                {{-- Cart Button --}}
+                <button
+                    type="button"
+                    aria-label="Add Chicken Fry Pack to cart"
+                    class="absolute right-0 top-0 flex h-11 w-11 items-center justify-center rounded-bl-xl bg-[#FF6527] text-white transition duration-300 group-hover:bg-[#e9521c]"
+                >
+                    <i class="fa-solid fa-cart-shopping text-[17px]"></i>
+                </button>
+
+
+                {{-- Food Image --}}
+                <div class="flex h-[250px] items-center justify-center">
+                    <img
+                        src="{{ asset('images/menu/food3.png') }}"
+                        alt="Chicken Fry Pack"
+                        class="h-full w-full object-contain transition duration-500 group-hover:scale-105"
+                    >
+                </div>
+
+
+                {{-- Food Name --}}
+                <h3
+                    class="mt-5 text-[25px] font-bold text-[#1B1D29]"
+                >
+                    Chicken fry pack
+                </h3>
+
+
+                {{-- Description --}}
+                <p
+                    class="mt-2 text-[18px] text-[#1B1D29]"
+                >
+                    Tasty food
+                </p>
+
+
+                {{-- Price --}}
+                <p
+                    class="mt-4 text-[18px] font-semibold text-[#FF6527]"
+                >
+                    $11.00
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
 
 
     @include('layouts.footer')
