@@ -34,14 +34,34 @@
             transform: translateX(0);
         }
     }
+    @keyframes fadeInLeft {
+        from {
+            opacity: 0;
+            transform: translateX(-40px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes fadeInRight {
+        from {
+            opacity: 0;
+            transform: translateX(40px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
 </style>
 
 <body class="bg-gray-100">
     @include('layouts.navbar')
-    <section
-    id="home"
-    class="min-h-screen bg-[#1B1D29] font-poppins"
->
+    <section id="home" class="min-h-screen bg-[#1B1D29] font-poppins" >
     <div
         class="mx-auto grid min-h-screen max-w-[1440px] grid-cols-1 items-center gap-8 px-6 pt-[106px] sm:px-10 md:grid-cols-2 lg:gap-0 lg:px-12"
     >
@@ -82,6 +102,74 @@
 
     </div>
 </section>
+
+<section
+    id="about"
+    class="bg-[#1B1D29] py-20 font-poppins sm:py-24 lg:py-28"
+>
+    <div
+        class="mx-auto grid max-w-[1440px] grid-cols-1 items-center gap-12 px-6 sm:px-10 lg:grid-cols-2 lg:gap-16 lg:px-12"
+    >
+
+        {{-- Image --}}
+        <div
+            class="flex justify-center lg:justify-start"
+        >
+            <img
+                src="{{ asset('images/about.png') }}"
+                alt="About Us Food"
+                class="w-full max-w-[516px] object-contain opacity-0 animate-[fadeInLeft_0.8s_ease-out_forwards]"
+            >
+        </div>
+
+
+        {{-- Content --}}
+        <div
+            class="text-center lg:text-left"
+        >
+
+            {{-- Label --}}
+            <span
+                class="text-[20px] font-semibold text-[#FF6527] opacity-0 animate-[fadeInRight_0.8s_ease-out_0.2s_forwards] sm:text-[22px]"
+            >
+                About Us
+            </span>
+
+
+            {{-- Heading --}}
+            <h2
+                class="mt-3 text-[32px] font-bold leading-[1.3] text-white opacity-0 animate-[fadeInRight_0.8s_ease-out_0.3s_forwards] sm:text-[40px] lg:text-[44px] xl:text-[48px]"
+            >
+                We Speak The Good
+                <br class="hidden sm:block">
+                Food Language
+            </h2>
+
+
+            {{-- Description --}}
+            <p
+                class="mx-auto mt-6 max-w-[600px] text-[17px] leading-[1.8] text-white/90 opacity-0 animate-[fadeInRight_0.8s_ease-out_0.4s_forwards] sm:text-[18px] lg:mx-0"
+            >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aut qui eos nostrum sunt vero recusandae quia sit
+                perspiciatis deleniti, debitis repellendus eaque placeat
+                repudiandae minus necessitatibus dolorem reiciendis.
+            </p>
+
+
+            {{-- Button --}}
+            <a
+                href="#menu"
+                class="mt-8 inline-flex rounded-xl bg-[#FF6527] px-7 py-4 text-[17px] font-semibold text-white opacity-0 shadow-lg shadow-[#FF6527]/20 transition duration-300 hover:-translate-y-1 hover:bg-[#ff7a45] hover:shadow-[#FF6527]/30 animate-[fadeInRight_0.8s_ease-out_0.5s_forwards]"
+            >
+                Today's Menu
+            </a>
+
+        </div>
+
+    </div>
+</section>
+
 
 
     @include('layouts.footer')
