@@ -379,16 +379,6 @@ Saat ingin bekerja kembali:
 
 # ⚠️ Important
 
-Jangan upload file berikut ke repository:
-
-```text
-.env
-/vendor
-/node_modules
-/public/build
-/public/hot
-```
-
 File `.env` berisi konfigurasi lokal dan informasi sensitif.
 
 Gunakan:
