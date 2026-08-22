@@ -350,6 +350,123 @@
 
     </div>
 </section>
+<section
+    id="services"
+    class="bg-[#1B1D29] py-20 font-poppins sm:py-24 lg:py-28"
+>
+    <div class="mx-auto max-w-[1280px] px-6 sm:px-10 lg:px-12">
+
+        {{-- Section Heading --}}
+        <div class="text-center">
+
+            <span class="text-[20px] font-semibold text-[#FF6527] sm:text-[22px]">
+                Services
+            </span>
+
+            <h2
+                class="mt-2 text-[32px] font-bold leading-tight text-white sm:text-[40px] lg:text-[44px]"
+            >
+                We provide best quality food
+            </h2>
+
+        </div>
+
+
+        {{-- Services --}}
+        <div
+            class="mt-16 grid grid-cols-1 gap-14 sm:mt-20 md:grid-cols-3 md:gap-8 lg:gap-16"
+        >
+
+            {{-- Order --}}
+            <div
+                class="group flex flex-col items-center text-center"
+            >
+                {{-- Icon --}}
+                <div class="flex h-[100px] items-center justify-center">
+                    <img
+                        src="{{ asset('images/services/s1.png') }}"
+                        alt="Order"
+                        class="h-[90px] w-[110px] object-contain transition duration-300 group-hover:-translate-y-2"
+                    >
+                </div>
+
+                {{-- Title --}}
+                <h3
+                    class="mt-5 text-[25px] font-bold text-[#FF6527]"
+                >
+                    Order
+                </h3>
+
+                {{-- Description --}}
+                <p
+                    class="mt-2 max-w-[310px] text-[17px] leading-[1.6] text-white"
+                >
+                    Pesan makanan favoritmu dengan mudah dan nikmati proses pemesanan yang cepat dan praktis.
+                </p>
+            </div>
+
+
+            {{-- Shipping --}}
+            <div
+                class="group flex flex-col items-center text-center"
+            >
+                {{-- Icon --}}
+                <div class="flex h-[100px] items-center justify-center">
+                    <img
+                        src="{{ asset('images/services/s2.png') }}"
+                        alt="Shipping"
+                        class="h-[90px] w-[110px] object-contain transition duration-300 group-hover:-translate-y-2"
+                    >
+                </div>
+
+                {{-- Title --}}
+                <h3
+                    class="mt-5 text-[25px] font-bold text-[#FF6527]"
+                >
+                    Shipping
+                </h3>
+
+                {{-- Description --}}
+                <p
+                    class="mt-2 max-w-[310px] text-[17px] leading-[1.6] text-white"
+                >
+                    Pesanan diproses dengan cepat dan dikirim dengan aman agar makanan sampai dalam kondisi terbaik.
+                </p>
+            </div>
+
+
+            {{-- Delivered --}}
+            <div
+                class="group flex flex-col items-center text-center"
+            >
+                {{-- Icon --}}
+                <div class="flex h-[100px] items-center justify-center">
+                    <img
+                        src="{{ asset('images/services/s3.png') }}"
+                        alt="Delivered"
+                        class="h-[90px] w-[110px] object-contain transition duration-300 group-hover:-translate-y-2"
+                    >
+                </div>
+
+                {{-- Title --}}
+                <h3
+                    class="mt-5 text-[25px] font-bold text-[#FF6527]"
+                >
+                    Delivered
+                </h3>
+
+                {{-- Description --}}
+                <p
+                    class="mt-2 max-w-[310px] text-[17px] leading-[1.6] text-white"
+                >
+                    Nikmati pesananmu langsung di depan pintu dengan layanan pengiriman yang aman dan terpercaya.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
 
 
 
