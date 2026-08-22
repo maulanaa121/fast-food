@@ -14,12 +14,12 @@
             </a>
 
             <a href="#about"
-                class="text-[18px] md:text-[22px] text-white transition duration-200 hover:text-[#FF6527]">
+                class="text-[18px] md:text-[22px] font-semibold text-white transition duration-200 hover:text-[#FF6527]">
                 About
             </a>
 
             <a href="#menu"
-                class="text-[18px] md:text-[22px] text-white transition duration-200 hover:text-[#FF6527]">
+                class="text-[18px] md:text-[22px] font-semibold text-white transition duration-200 hover:text-[#FF6527]">
                 Menu
             </a>
 
