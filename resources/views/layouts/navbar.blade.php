@@ -9,27 +9,27 @@
         {{-- Desktop Menu --}}
         <div class="hidden items-center gap-5 md:gap-10 sm:flex xl:gap-12">
             <a href="/"
-                class="text-[18px] md:text-[22px] font-semibold text-[#FF6527] transition duration-200 hover:text-[#FF6527]/80">
+                class="text-[18px] md:text-[22px] font-medium md:font-semibold text-[#FF6527] transition duration-200 hover:text-[#FF6527]/80">
                 Home
             </a>
 
             <a href="#about"
-                class="text-[18px] md:text-[22px] font-semibold text-white transition duration-200 hover:text-[#FF6527]">
+                class="text-[18px] md:text-[22px] font-medium md:font-semibold text-white transition duration-200 hover:text-[#FF6527]">
                 About
             </a>
 
             <a href="#menu"
-                class="text-[18px] md:text-[22px] font-semibold text-white transition duration-200 hover:text-[#FF6527]">
+                class="text-[18px] md:text-[22px] font-medium md:font-semibold text-white transition duration-200 hover:text-[#FF6527]">
                 Menu
             </a>
 
             <a href="#services"
-                class="text-[18px] md:text-[22px] font-semibold text-white transition duration-200 hover:text-[#FF6527]">
+                class="text-[18px] md:text-[22px] font-medium md:font-semibold text-white transition duration-200 hover:text-[#FF6527]">
                 Services
             </a>
 
             <a href="#contact"
-                class="text-[18px] md:text-[22px] font-semibold text-white transition duration-200 hover:text-[#FF6527]">
+                class="text-[18px] md:text-[22px] font-medium md:font-semibold text-white transition duration-200 hover:text-[#FF6527]">
                 Contact
             </a>
         </div>
