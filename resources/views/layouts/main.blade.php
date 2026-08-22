@@ -374,7 +374,7 @@
 
         {{-- Services --}}
         <div
-            class="mt-16 grid grid-cols-1 gap-14 sm:mt-20 md:grid-cols-3 md:gap-8 lg:gap-16"
+            class="mt-16 grid grid-cols-1 gap-14 sm:mt-20 sm:grid-cols-2 md:grid-cols-3 md:gap-8 lg:gap-16"
         >
 
             {{-- Order --}}
