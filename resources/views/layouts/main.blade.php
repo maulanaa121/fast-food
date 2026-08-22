@@ -467,8 +467,37 @@
 
     </div>
 </section>
+<section
+    id="today-menu"
+    class="bg-[#1B1D29] px-6 py-16 font-poppins sm:px-10 sm:py-20 lg:px-12 lg:py-24"
+>
+    <div
+        class="mx-auto flex min-h-[380px] max-w-[1280px] items-center justify-center rounded-xl bg-[#FFF0E8] px-6 py-16 sm:min-h-[400px] sm:px-10 lg:px-20"
+    >
 
+        <div class="text-center">
 
+            {{-- Heading --}}
+            <h2
+                class="text-[32px] font-bold leading-[1.35] text-[#111827] sm:text-[40px] lg:text-[44px]"
+            >
+                We make quality food
+                <br>
+                Everyday
+            </h2>
+
+            {{-- Button --}}
+            <a
+                href="#menu"
+                class="mt-10 inline-flex rounded-xl bg-[#FF6527] px-7 py-4 text-[17px] font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-[#ff7a45] hover:shadow-lg hover:shadow-[#FF6527]/25"
+            >
+                Today's menu
+            </a>
+
+        </div>
+
+    </div>
+</section>
 
     @include('layouts.footer')
 </body>
